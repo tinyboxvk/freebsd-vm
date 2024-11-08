@@ -10,7 +10,7 @@ on:
       - '.github/data/*'
       - 'conf/*'
       - '.github/workflows/syncbase.yml'
-
+ 
     
 jobs:
   sync:
