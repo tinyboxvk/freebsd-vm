@@ -1,4 +1,4 @@
-# Run GitHub CI in FreeBSD ![Test](https://github.com/vmactions/freebsd-vm/workflows/Test/badge.svg)
+# Run GitHub CI in FreeBSD ![Test](https://github.com/tinyboxvk/freebsd-vm/workflows/Test/badge.svg)
 
 Use this action to run your CI in FreeBSD.
 
@@ -26,7 +26,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: tinyboxvk/freebsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -50,7 +50,7 @@ jobs:
 ```
 
 
-The latest major version is: `v1`, which is the most recommended to use. (You can also use the latest full version: `v1.1.5`)  
+The latest major version is: ``, which is the most recommended to use. (You can also use the latest full version: ``)  
 
 
 If you are migrating from the previous `v0`, please change the `runs-on: ` to `runs-on: ubuntu-latest`
@@ -87,7 +87,7 @@ The code is shared from the host to the VM via `rsync` by default, you can choos
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: tinyboxvk/freebsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -116,7 +116,7 @@ When using `rsync`,  you can define `copyback: false` to not copy files back fro
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: tinyboxvk/freebsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -143,7 +143,7 @@ You can add NAT port between the host and the VM.
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: tinyboxvk/freebsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -165,7 +165,7 @@ The default memory of the VM is 6144MB, you can use `mem` option to set the memo
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: tinyboxvk/freebsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -182,7 +182,7 @@ The VM is using all the cpu cores of the host by default, you can use `cpu` opti
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: tinyboxvk/freebsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -201,7 +201,7 @@ It uses [the FreeBSD 14.1](conf/default.release.conf) by default, you can use `r
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: tinyboxvk/freebsd-vm@
       with:
         release: "13.2"
 ...
@@ -221,7 +221,7 @@ Support custom shell:
     - uses: actions/checkout@v4
     - name: Start VM
       id: vm
-      uses: vmactions/freebsd-vm@v1
+      uses: tinyboxvk/freebsd-vm@
       with:
         sync: sshfs
     - name: Custom shell step 1
